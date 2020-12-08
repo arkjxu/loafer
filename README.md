@@ -3,7 +3,7 @@
 Note: 
 ```
 This is a quick library to help with my development work at Nike Inc, please check the supported features before you use.
-Feel free to clone and add your features if needed
+Feel free to fork and add your features if needed
 ```
 
 A Simple Slack App library to help you quickly spin up Slack Apps that are capable of app distribution and signature checking without the hassle.
