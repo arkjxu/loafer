@@ -105,6 +105,14 @@ func main {
 }
 ```
 
+App will now serve on the route:
+
+http://0.0.0.0:8080/{prefix}/install - For app distribution
+http://0.0.0.0:8080/{prefix}/events - For event subscription
+http://0.0.0.0:8080/{prefix}/commands - For app commands
+http://0.0.0.0:8080/{prefix}/interactions - For app interactions
+http://0.0.0.0:8080/{prefix}/${custom_route_pattern} - For app custom routes
+
 # API Reference
 
 ## App
