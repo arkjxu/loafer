@@ -292,13 +292,14 @@ func (a *SlackApp) Close(ctx context.Context) {
 // InitializeSlackApp - Return an instance of SlackApp
 func InitializeSlackApp(opts *SlackAppOptions) SlackApp {
 	app := SlackApp{
-		opts:            *opts,
-		distCB:          nil,
-		cmds:            make(map[string]func(ctx *SlackContext)),
-		actionListeners: make(map[string]func(ctx *SlackContext)),
-		submitListeners: make(map[string]func(ctx *SlackContext)),
-		closeListeners:  make(map[string]func(ctx *SlackContext)),
-		eventListeners:  make(map[string]func(ctx *SlackContext))}
+		opts:              *opts,
+		distCB:            nil,
+		cmds:              make(map[string]func(ctx *SlackContext)),
+		actionListeners:   make(map[string]func(ctx *SlackContext)),
+		submitListeners:   make(map[string]func(ctx *SlackContext)),
+		closeListeners:    make(map[string]func(ctx *SlackContext)),
+		eventListeners:    make(map[string]func(ctx *SlackContext)),
+		shortcutListeners: make(map[string]func(ctx *SlackContext))}
 	return app
 }
 
