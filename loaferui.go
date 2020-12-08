@@ -156,7 +156,7 @@ func MakeSlackBlockExternalStaticSelectInput(label string, placeholder string, i
 }
 
 // MakeSlackBlockStaticSelectInput - Make slack static select input field
-func MakeSlackBlockStaticSelectInput(label string, placeholder string, options []SlackInputOption, initialOptions []SlackInputOption, actionID string, isMulti bool, minQueryLength uint16) SlackBlockSection {
+func MakeSlackBlockStaticSelectInput(label string, placeholder string, options []SlackInputOption, initialOptions []SlackInputOption, actionID string, isMulti bool) SlackBlockSection {
 	selectType := "static_select"
 	isEmojiSupported := true
 	if isMulti {
