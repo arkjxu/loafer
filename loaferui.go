@@ -202,11 +202,12 @@ func MakeSlackBlockButton(label string, text string, value string, actionID stri
 }
 
 // MakeSlackModalMultiConversationSelectInput - Make slack multi convo select input field
-func MakeSlackModalMultiConversationSelectInput(label string, placeholder string, initialConversations []string, actionID string) SlackModalSelect {
+func MakeSlackModalMultiConversationSelectInput(label string, placeholder string, initialConversations []string, isOptional bool, actionID string) SlackModalSelect {
 	isEmojiSupported := true
 	return SlackModalSelect{
-		Type:    "input",
-		BlockID: actionID,
+		Type:     "input",
+		BlockID:  actionID,
+		Optional: isOptional,
 		Element: &SlackBlockAccessory{
 			Type: "multi_conversations_select",
 			Placeholder: &SlackBlockText{
